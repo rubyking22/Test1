@@ -337,7 +337,7 @@ gsap.to(imageSeq, {
   function redirectToNextPage() {
     console.log("All frames rendered, redirecting to PRAYAG244.html...");
     setTimeout(() => {
-      window.location.replace("./prayagtemp.html");
+      window.location.replace("prayagtemp.html");
     }, 1000); // wait for 1 second before redirecting
   }
 function render() {

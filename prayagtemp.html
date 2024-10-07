@@ -438,6 +438,61 @@ body.loaded #loader-wrapper {
         }
 
 
+        
+.contact-button1 {
+            display: none;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        /* Show image button only on small devices (phones) */
+        @media (max-width: 600px) {
+            .contact-button {
+                display: none; /* Hide the text button on phones */
+            }
+
+            .contact-button1 {
+                display: inline-block; /* Show the image button on phones */
+            }
+
+            .contact-button1 img {
+                width: 45px; /* Adjust the width of the image */
+                height: auto;
+		right:5%;
+		top:25%;
+		position:absolute; /* Maintain the aspect ratio */
+            }
+        }
+
+        /* Show text button only on tablets and larger devices */
+        @media (min-width: 601px) {
+            .contact-button1 {
+                display: none; /* Hide the image button on tablets and larger */
+            }
+
+            .contact-button {
+                display: inline-block; /* Show the text button */
+            }
+        }
+        
+        /* Medium devices (tablets, 600px to 1200px) */
+        @media (min-width: 601px) and (max-width: 1200px) {
+            .contact-button {
+                font-size: 12px;
+                padding: 9px 18px;
+            }
+        }
+        
+        /* Large devices (laptops/desktops, 1200px and up) */
+        @media (min-width: 1201px) {
+            .contact-button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+
         .contact-button {
             border: none;
             padding: 10px 20px;
@@ -453,6 +508,10 @@ body.loaded #loader-wrapper {
         .contact-button:hover {
             background-color: #7e4cc9;
         }
+
+
+
+
 
         h2 {
             text-align: center;
@@ -512,7 +571,7 @@ body.loaded #loader-wrapper {
             align-items: center;
             position: absolute;
             top: 68%;
-            left: 46%;
+            left: 45.9%;
             cursor: pointer;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
             backdrop-filter: blur(10px);
@@ -540,14 +599,7 @@ body.loaded #loader-wrapper {
             }
         }
         /* Large devices (laptops/desktops, 1200px and up) */
-        @media (min-width: 1201px) {
-            .b {
-                font-size: 30px;
-                top: 68%;
-                left: 46%;
-                transform: none;
-            }
-        }
+       
 
 
         .hcontainer {
@@ -670,7 +722,7 @@ body.loaded #loader-wrapper {
             opacity: 0;
             width:28%;
             transition: opacity 1s ease-in-out;
-
+		
         }
 
         /* For small screens (mobile devices) */
@@ -679,9 +731,21 @@ body.loaded #loader-wrapper {
                 top: 50%; /* Centered more vertically */
                 left: 50%; /* Centered horizontally */
                 font-size: 18px; /* Smaller font for readability on small screens */
-                width: 80%; /* Wider to fit more text */
+                width: 86%; /* Wider to fit more text */
                 z-index: 2;
+		
+		
             }
+	 
+ k {
+    text-align: center;
+    left: 50%;
+    transform: translateX(200%);
+  }
+}
+
+            
+
             
         }
 
@@ -693,10 +757,8 @@ body.loaded #loader-wrapper {
                 font-size: 28px; /* Adjust font size */
                 width: 42%; /* Medium width */
             }
-            .subheading{
-                margin-top: 15px;
-            }
-        }
+
+                    }
 
         .subheading {
              margin-top: 10px;
@@ -899,7 +961,7 @@ left:1%;
             background-color: black;
             color: #b3b3b3;
             padding: 40px;
-	; /* Reduced padding for mobile */
+	 /* Reduced padding for mobile */
             display: flex;
             flex-wrap: wrap; /* Allow wrapping */
             justify-content: space-between;
@@ -914,7 +976,7 @@ left:1%;
             font-size: 1rem; /* Responsive font size */
         }
         .footer .middle i {
-            font-size: 60px; /* Adjust icon size */
+            font-size: 50px; /* Adjust icon size */
             margin: 0 25px; /* Adjust margin */
             color: #b3b3b3; /* Set icon color */
             transition: color 0.3s; /* Smooth color change */
@@ -984,13 +1046,14 @@ left:1%;
     }
     .footer .left{
         height: 40%;
+	
     }
     .footer .middle{
         font-size: 10vw;
         height: 40%;
     }
     .footer .middle i {
-            font-size: 40px; /* Adjust icon size */
+            font-size: 30px; /* Adjust icon size */
         }
     .footer-bottom {
         flex-direction: column;  /* Stack elements vertically */
@@ -1122,8 +1185,44 @@ left:1%;
       position: relative;
     }
 
+@media (max-width: 600px) {
+    .swiper {
+        padding: 25px 95px;
+    }
+    .swiper-slide {
+        width: 300px;
+        aspect-ratio: 3/4;
+    }
+.eventcontainer{
+   
+    height: 85vh;
+	
+   
+}
 
 
+
+}
+.icon{
+color: #f5f3e6; 
+font-weight: bold; 
+font-size: 1.5rem; 
+margin-top: 10px;
+}
+@media (max-width: 600px) {
+.icon{
+
+font-size: 1rem; 
+margin-top: 5px;
+}
+.get{
+margin-top:20px;}
+}
+.get{
+margin-left: 2px;
+
+
+}
     </style>
 </head>
 <body class="loading">
@@ -1140,6 +1239,9 @@ left:1%;
             <div class="nav-buttons">
                 <a href="#foots">
                 <button class="contact-button">CONTACT</button>
+		<button class="contact-button1">
+                    <img src="f.png">
+                </button>
             </a>
             </div>
         </div>
@@ -1246,16 +1348,22 @@ left:1%;
 <footer>
         <div class="footer">
             <div class="left">
-                <p style="margin-left: 2px;">Get in touch</p>
-                <p style="color: #f5f3e6; font-weight: bold; font-size: 2.5rem; margin-top: 10px;">ASIET@.ac.in</p>
-            </div>
+                <p class="get">Get in touch</p>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=prayag24@adishankara.ac.in" target="_blank">
+    <p class="icon">prayag24@adishankara.ac.in</p>
+</a>
+		
+                            </div>
             <div class="middle">
+ <a href="tel:+91 9207737789">
+                    <i class="fas fa-phone"></i> <!-- Phone icon -->
+                </a>
                 <a href="https://www.instagram.com/_prayag_24?utm_source=qr&igsh=MXNtbW1qbG11bnY0dQ==">
                 <i class="fab fa-instagram"></i></a>
                 <a href="https://maps.app.goo.gl/9LdDB4kk9MnBEPBZ9">
                     <i class="fas fa-map-marker-alt"></i> <!-- Map marker icon -->
             </a>
-                <i class="fab fa-facebook"></i>
+             
             </div>
             <div class="right">
                 <div>
@@ -1275,14 +1383,14 @@ left:1%;
                 </div>
                 <div>   
                     <a href="#sponlink">                
-                    <p style="font-size: 1rem;">Sponsers</p>
+                    <p style="font-size: 1rem;">Sponsors</p>
                 </a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div style="flex: 1; display: flex; align-items: center;">
-                <p style="margin: 0;">©2024 - Prayag ASIET</p>
+                <p style="margin: 0;">©2024 - Prayag</p>
             </div>
             <div style="flex: 1; text-align: center;">
                 <a href="team.html" style="color: #b3b3b3; text-decoration: none;">Developed by PRAYAG24 Team</a>
@@ -1316,16 +1424,65 @@ var swiper = new Swiper(".swiper", {
         modifier: 1,
         slideShadows: true,
     },
-    on: {
-        click(event) {
-            swiper.slideTo(this.clickedIndex);
-        },
-    },
     pagination: {
         el: ".swiper-pagination",
     },
-});
+    breakpoints: {
+        // Mobile view settings
+        0: {
+            slidesPerView: 1,
+            centeredSlides: true,
+            coverflowEffect: {
+                stretch: 20,
+                depth: 100,
+            },
+        },
+        // Tablet view settings
+        768: {
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            coverflowEffect: {
+                stretch: 40,
+                depth: 200,
+            },
+        },
+        // Desktop view settings
+        1024: {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            coverflowEffect: {
+                stretch: 80,
+                depth: 350,
+            },
+        }
+    },
+    on: {
+        slideChange: function () {
+            // Disable all links initially
+            document.querySelectorAll(".swiper-slide a").forEach(link => {
+                link.style.pointerEvents = "none";
+            });
 
+            // Enable link for active slide
+            const activeSlide = this.slides[this.activeIndex];
+            const activeLink = activeSlide.querySelector("a");
+            if (activeLink) {
+                activeLink.style.pointerEvents = "auto";
+            }
+        },
+        click: function (event) {
+            const clickedIndex = this.clickedIndex;
+
+            // Check if the clicked slide is different from the active slide
+            if (clickedIndex !== this.activeIndex) {
+                // Use a slight delay for a smoother experience on mobile
+                setTimeout(() => {
+                    this.slideTo(clickedIndex);
+                }, 100); // Adjust delay as needed (100ms works well for mobile)
+            }
+        },
+    },
+});
 
         window.addEventListener('scroll', function() {
             const container = document.getElementById('containertext');
